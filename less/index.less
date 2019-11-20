@@ -140,7 +140,7 @@ html, body {
 			.flex;
 			.border-round;
 			flex-flow: row nowrap;
-			border: 2px solid @hightlight-light-red;
+			border: 2px solid @highlight-dark-red;
 		}
 		.skills {
 			.card-box;
@@ -170,43 +170,50 @@ html, body {
 			flex-flow: column nowrap;
 			justify-content: center;
 			padding: 30px 0;
-			margin: 30px;
-			width: 90%;
+			margin: 30px 0;
+			width: 100%;
 			border: 2px solid @highlight-dark-red;
 			.border-round;
-			.bk-lightest;
+			.bk-lighter;
 		}
 		.contact {
 			.card-box;			
 			display: flex;
 			flex-flow: column nowrap;
-			.bk-lighter;
+			.bk-lightest;
 			h1 {
 				text-align: center;
-				.bk-lighter;
+				.bk-lightest;
 				font-size: 3rem;
+				padding: 10px 0;
+				.smokey;
 			}
 			.form-row {
 				.flex;
 				flex-flow: row nowrap;
 				justify-content: space-between;
-				.bk-lighter;
-				padding: 20px;
+				.bk-lightest;
+				padding: 10px;
 				.category {
 					.flex;
 					color: @font-color;
-					font-size: 1.4rem;
-					justify-content: space-between;
+					font-size: 1.6rem;
+					justify-content: flex-end;
 					align-items: flex-start;
-					padding-top: 15px;
-					.bk-lighter;
+					padding-top: 11px;
+					.bk-lightest;
+					width: 28%;
+					font-weight: 500;
 					
+				}
+				.msg {
+					padding-top: 3px;
 				}
 				.form-box {
 					.flex;
 					justify-content: center;
 					width: 70%;
-					.bk-lighter;
+					.bk-lightest;
 					input, textarea {
 						width: 90%;
 					}
@@ -215,6 +222,13 @@ html, body {
 					}
 				}
 			}
+		}
+
+		.social-media-nav {
+			.flex;
+			.card-box;
+			
+			;
 		}
 		
 			

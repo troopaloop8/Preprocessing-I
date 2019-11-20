@@ -214,7 +214,7 @@ body {
   display: flex;
   border-radius: 10px;
   flex-flow: row nowrap;
-  border: 2px solid #a8717b;
+  border: 2px solid #5c0011;
 }
 .container .card-container .skills {
   color: #a8a594;
@@ -273,11 +273,11 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   padding: 30px 0;
-  margin: 30px;
-  width: 90%;
+  margin: 30px 0;
+  width: 100%;
   border: 2px solid #5c0011;
   border-radius: 10px;
-  background: #292d41;
+  background: #202333;
 }
 .container .card-container .contact {
   color: #a8a594;
@@ -288,34 +288,45 @@ body {
   border-radius: 10px;
   display: flex;
   flex-flow: column nowrap;
-  background: #202333;
+  background: #292d41;
 }
 .container .card-container .contact h1 {
   text-align: center;
-  background: #202333;
+  background: #292d41;
   font-size: 3rem;
+  padding: 10px 0;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
 }
 .container .card-container .contact .form-row {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  background: #202333;
-  padding: 20px;
+  background: #292d41;
+  padding: 10px;
 }
 .container .card-container .contact .form-row .category {
   display: flex;
   color: #a8a594;
-  font-size: 1.4rem;
-  justify-content: space-between;
+  font-size: 1.6rem;
+  justify-content: flex-end;
   align-items: flex-start;
-  padding-top: 15px;
-  background: #202333;
+  padding-top: 11px;
+  background: #292d41;
+  width: 28%;
+  font-weight: 500;
+}
+.container .card-container .contact .form-row .msg {
+  padding-top: 3px;
 }
 .container .card-container .contact .form-row .form-box {
   display: flex;
   justify-content: center;
   width: 70%;
-  background: #202333;
+  background: #292d41;
 }
 .container .card-container .contact .form-row .form-box input,
 .container .card-container .contact .form-row .form-box textarea {
@@ -323,6 +334,15 @@ body {
 }
 .container .card-container .contact .form-row .form-box input {
   height: 40px;
+}
+.container .card-container .social-media-nav {
+  display: flex;
+  color: #a8a594;
+  background: #1c202c;
+  margin: 20px;
+  padding: 1.5%;
+  border: 2px solid #0c0d11;
+  border-radius: 10px;
 }
 /* Color Pallet Variables */
 /* Lighter layers to indicate upper layers of background */
