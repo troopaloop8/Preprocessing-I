@@ -150,6 +150,11 @@ body {
   border-left: 5px solid #AF001F;
   border-right: 5px solid #AF001F;
 }
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
 .container header {
   background: #10121a;
   margin: 20px 0;
@@ -169,15 +174,24 @@ body {
   text-shadow: #fa0000c9 0px 3px 3px;
   font-size: 2.2rem;
 }
+@media (max-width: 600px) {
+  .container header nav a {
+    font-size: 1.8rem;
+  }
+}
 .container .intro {
   margin: 30px 5%;
   border: 2px solid #0c0d11;
   padding: 2.5%;
   border-radius: 10px;
   background: #141720;
+  transition: background 2s;
+}
+.container .intro:hover {
+  background: #292d41;
 }
 .container .intro h1 {
-  background: #141720;
+  background: inherit;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -187,7 +201,7 @@ body {
   text-align: center;
 }
 .container .intro h2 {
-  background: #141720;
+  background: inherit;
   color: #a8a594;
   font-size: 2.5rem;
   font-weight: 400;
@@ -195,7 +209,7 @@ body {
   text-align: center;
 }
 .container .intro h2 span {
-  background: #141720;
+  background: inherit;
   color: #a8a594 !important;
   font-size: 2.5rem;
   font-weight: 400;
@@ -216,6 +230,11 @@ body {
   flex-flow: row nowrap;
   border: 2px solid #5c0011;
 }
+@media (max-width: 600px) {
+  .container .card-container .block-one {
+    flex-flow: column wrap;
+  }
+}
 .container .card-container .skills {
   color: #a8a594;
   background: #1c202c;
@@ -224,10 +243,16 @@ body {
   border: 2px solid #0c0d11;
   border-radius: 10px;
   width: 29%;
+  transition: background 2s;
+}
+@media (max-width: 600px) {
+  .container .card-container .skills {
+    width: 90%;
+  }
 }
 .container .card-container .skills ul {
   font-size: 3rem;
-  background: #1c202c;
+  background: inherit;
   margin: 10px 10px 0 0;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -236,11 +261,21 @@ body {
   text-shadow: #fa0000c9 0px 3px 3px;
   font-weight: 400;
 }
+@media (max-width: 600px) {
+  .container .card-container .skills ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: space-evenly;
+  }
+}
 .container .card-container .skills li {
-  background: #1c202c;
+  background: inherit;
   margin: 25px 20px 20px;
   color: #a8a594;
   text-shadow: none;
+}
+.container .card-container .skills:hover {
+  background: #292d41;
 }
 .container .card-container .work-history {
   color: #a8a594;
@@ -250,10 +285,16 @@ body {
   border: 2px solid #0c0d11;
   border-radius: 10px;
   width: 60%;
+  transition: background 2s;
+}
+@media (max-width: 600px) {
+  .container .card-container .work-history {
+    width: 90%;
+  }
 }
 .container .card-container .work-history ul {
   font-size: 3rem;
-  background: #1c202c;
+  background: inherit;
   margin: 10px 10px 0 0;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -263,36 +304,60 @@ body {
   font-weight: 400;
 }
 .container .card-container .work-history li {
-  background: #1c202c;
+  background: inherit;
   margin: 25px 20px 20px;
   color: #a8a594;
   text-shadow: none;
 }
+.container .card-container .work-history:hover {
+  background: #292d41;
+}
 .container .card-container .block-two {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  align-items: center;
   padding: 30px 0;
   margin: 30px 0;
   width: 100%;
   border: 2px solid #5c0011;
   border-radius: 10px;
-  background: #202333;
+  background: #10121a;
+}
+.container .card-container .block-two .submit-button {
+  display: flex;
+  align-self: center;
+}
+.container .card-container .block-two .submit-button button {
+  border-radius: 10px;
+  border: none;
+}
+.container .card-container .block-two .submit-button a {
+  text-decoration: none;
+  color: #0c0d11;
+  background: none;
+  padding: 5px 10px;
+  display: flex;
+  align-self: center;
+  font-size: 1.4rem;
 }
 .container .card-container .contact {
   color: #a8a594;
-  background: #1c202c;
   margin: 20px;
   padding: 1.5%;
   border: 2px solid #0c0d11;
   border-radius: 10px;
+  width: 90%;
   display: flex;
   flex-flow: column nowrap;
+  background: #1c202c;
+  transition: background 2s;
+}
+.container .card-container .contact:hover {
   background: #292d41;
 }
 .container .card-container .contact h1 {
   text-align: center;
-  background: #292d41;
+  background: inherit;
   font-size: 3rem;
   padding: 10px 0;
   -webkit-background-clip: text;
@@ -305,7 +370,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  background: #292d41;
+  background: inherit;
   padding: 10px;
 }
 .container .card-container .contact .form-row .category {
@@ -315,7 +380,7 @@ body {
   justify-content: flex-end;
   align-items: flex-start;
   padding-top: 11px;
-  background: #292d41;
+  background: inherit;
   width: 28%;
   font-weight: 500;
 }
@@ -326,7 +391,7 @@ body {
   display: flex;
   justify-content: center;
   width: 70%;
-  background: #292d41;
+  background: inherit;
 }
 .container .card-container .contact .form-row .form-box input,
 .container .card-container .contact .form-row .form-box textarea {
@@ -343,6 +408,30 @@ body {
   padding: 1.5%;
   border: 2px solid #0c0d11;
   border-radius: 10px;
+  width: auto;
+  justify-content: center;
+  flex-flow: row nowrap;
+  background: #0c0d11;
+}
+.container .card-container .social-media-nav a {
+  display: flex;
+  flex-flow: row wrap;
+  text-decoration: none;
+}
+.container .card-container .social-media-nav a i {
+  width: 100%;
+  font-size: 4.5rem;
+  padding: 5px 20px;
+  color: #a8a594;
+  background: #0c0d11;
+}
+.container .card-container .social-media-nav a i:hover {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
+  background: #0c0d11;
 }
 /* Color Pallet Variables */
 /* Lighter layers to indicate upper layers of background */
@@ -386,7 +475,7 @@ body {
 }
 .card-ul {
   font-size: 3rem;
-  background: #1c202c;
+  background: inherit;
   margin: 10px 10px 0 0;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -396,7 +485,7 @@ body {
   font-weight: 400;
 }
 .card-li {
-  background: #1c202c;
+  background: inherit;
   margin: 25px 20px 20px;
   color: #a8a594;
   text-shadow: none;

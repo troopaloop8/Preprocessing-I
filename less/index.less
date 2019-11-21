@@ -67,6 +67,7 @@ html, body {
 /*Container to Specify overall dimensions of site */
 
 .container {
+
 	width: 980px;
 	margin: 0 auto;
 	min-height: 100vh;
@@ -76,6 +77,11 @@ html, body {
 	flex-flow: column wrap;
 	border-left: 5px solid @highlight-red;
 	border-right: 5px solid @highlight-red;
+	@media (max-width: 600px) {
+		
+		width: 100%;
+	
+	}
 
 	header {
 		background: @dark-darker;
@@ -92,6 +98,9 @@ html, body {
 				text-decoration: none;
 				.smokey;
 				font-size: 2.2rem;
+				@media (max-width: 600px) {
+					font-size: 1.8rem;
+				}
 				
 	
 			}
@@ -103,23 +112,27 @@ html, body {
 		padding: 2.5%;
 		.border-round;
 		.bk-dark; 
+		transition: background 2s;;
+		&:hover {
+			.bk-lightest;
+		}
 		
 		h1 {
 			color: @font-color;
-			.bk-dark; 
+			background: inherit;
 			.smokey;
 			font-size: 4rem;
 			text-align: center;
 		}
 		h2 {
-			.bk-dark;
+			background: inherit;
 			color: @font-color;
 			font-size: 2.5rem;
 			font-weight: 400;
 			margin: 20px 0;
 			text-align: center;
 			span {
-				.bk-dark;
+				background: inherit;
 			color: @font-color!important;
 			font-size: 2.5rem;
 			font-weight: 400;
@@ -141,22 +154,45 @@ html, body {
 			.border-round;
 			flex-flow: row nowrap;
 			border: 2px solid @highlight-dark-red;
+			@media (max-width: 600px) {
+				flex-flow: column wrap;
+			}
 		}
 		.skills {
 			.card-box;
 			width: 29%;
+			@media (max-width: 600px) {
+				width: 90%;
+			}
+			transition: background 2s;
 			ul {
 				.card-ul;
+				@media (max-width: 600px) {
+					.flex;
+					
+					flex-flow: row wrap;
+					align-items: space-evenly;
+				}
 				
 			}
+			
 			li {
 				.card-li;
+				
+				
+			}
+			&:hover {
+				.bk-lightest;
 			}
 		}
 	
 		.work-history {
 			.card-box;
 			width: 60%;
+			@media (max-width: 600px) {
+				width: 90%;
+			}
+			transition: background 2s;
 			ul {
 				.card-ul;
 				
@@ -164,26 +200,54 @@ html, body {
 			li {
 				.card-li;
 			}
+			&:hover {
+				.bk-lightest;
+			}
 		}
 		.block-two {
 			.flex;
 			flex-flow: column nowrap;
-			justify-content: center;
+			align-items: center;
 			padding: 30px 0;
 			margin: 30px 0;
 			width: 100%;
 			border: 2px solid @highlight-dark-red;
 			.border-round;
-			.bk-lighter;
+			.bk-darker;
+			.submit-button {
+				.flex;
+				align-self: center;
+				button {
+					border-radius: 10px;
+					border: none;
+				}
+				
+				a {
+					text-decoration: none;
+					color: @dark-darkest;
+					background: none;
+					padding: 5px 10px;
+					
+					.flex;
+					align-self: center;
+					font-size: 1.4rem;
+
+				}
+			}
 		}
 		.contact {
-			.card-box;			
+			.card-box;
+			width: 90%;			
 			display: flex;
 			flex-flow: column nowrap;
-			.bk-lightest;
+			.bk-light;
+			transition: background 2s;
+			&:hover {
+				.bk-lightest;
+			}
 			h1 {
 				text-align: center;
-				.bk-lightest;
+				background: inherit;
 				font-size: 3rem;
 				padding: 10px 0;
 				.smokey;
@@ -192,7 +256,7 @@ html, body {
 				.flex;
 				flex-flow: row nowrap;
 				justify-content: space-between;
-				.bk-lightest;
+				background: inherit;
 				padding: 10px;
 				.category {
 					.flex;
@@ -201,7 +265,7 @@ html, body {
 					justify-content: flex-end;
 					align-items: flex-start;
 					padding-top: 11px;
-					.bk-lightest;
+					background: inherit;
 					width: 28%;
 					font-weight: 500;
 					
@@ -213,7 +277,7 @@ html, body {
 					.flex;
 					justify-content: center;
 					width: 70%;
-					.bk-lightest;
+					background: inherit;
 					input, textarea {
 						width: 90%;
 					}
@@ -227,8 +291,31 @@ html, body {
 		.social-media-nav {
 			.flex;
 			.card-box;
+			width: auto;
+			justify-content: center;
+			flex-flow: row nowrap;
+			.bk-darkest;
 			
-			;
+			a {
+				.flex;
+				flex-flow: row wrap;
+				text-decoration: none;
+
+
+			}
+			a i {
+				width: 100%;
+				font-size: 4.5rem;
+				padding: 5px 20px;
+				color: @font-color;
+				.bk-darkest;
+				&:hover {
+					
+					.smokey;
+					.bk-darkest;
+				}
+			}
+			
 		}
 		
 			
@@ -315,14 +402,14 @@ html, body {
 
 .card-ul {
 	font-size: 3rem;
-	.bk-light;
+	background: inherit;
 	margin: 10px 10px 0 0;
 	.smokey;
 	font-weight: 400;
 }
 
 .card-li {
-	.bk-light;
+	background: inherit;
 	margin: 25px 20px 20px;
 	.normal-font;
 }
