@@ -1,1 +1,637 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  vertical-align: baseline;
+  font-family: 'Tomorrow', sans-serif;
+  background: #10121a;
+}
+body {
+  background: #0c0d11;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+  background: #10121a;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/*Container to Specify overall dimensions of site */
+.container {
+  width: 980px;
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  border-left: 5px solid #AF001F;
+  border-right: 5px solid #AF001F;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+.container header {
+  background: #10121a;
+  margin: 20px 0;
+  height: 50px;
+}
+.container header nav {
+  background: #10121a;
+  display: flex;
+  justify-content: space-evenly;
+}
+.container header nav a {
+  background: #10121a;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
+  font-size: 2.2rem;
+}
+.container header nav a:hover {
+  border-bottom: 2px solid #AF001F;
+  padding-bottom: 5px;
+}
+@media (max-width: 600px) {
+  .container header nav a {
+    font-size: 1.8rem;
+  }
+}
+.container .portfolio-container {
+  margin: 80px 0 30px;
+  border: 2px solid #5c0011;
+  padding: 2.5%;
+  border-radius: 10px;
+  background: #10121a;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.container .portfolio-container .card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (max-width: 873px) {
+  .container .portfolio-container .card-container {
+    flex-flow: column nowrap;
+  }
+}
+.container .portfolio-container .portfolio-card {
+  width: 43%;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #0c0d11;
+  transition: background 2s;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #1c202c;
+}
+@media (max-width: 873px) {
+  .container .portfolio-container .portfolio-card {
+    width: 70%;
+    flex-flow: row wrap;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .container .portfolio-container .portfolio-card {
+    width: 75%;
+  }
+}
+.container .portfolio-container .portfolio-card:hover {
+  background: #292d41;
+}
+.container .portfolio-container .portfolio-card img {
+  width: 100%;
+}
+.container .portfolio-container .portfolio-card h2 {
+  font-size: 2.2rem;
+  font-weight: 100;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: #fa0000c9 0px 3px 3px;
+  color: #a8a594;
+  background: inherit;
+  margin: 12px 0 15px;
+}
+.container .portfolio-container .portfolio-card a:last-child {
+  text-decoration: none;
+  font-size: 1.8rem;
+  background: inherit;
+}
+.container .portfolio-container .portfolio-card i {
+  font-size: 2.2rem;
+  background: inherit;
+  margin: 0 5px;
+}
+.container .portfolio-container .portfolio-card .git {
+  font-size: 2rem;
+  text-decoration: none;
+  background: inherit;
+  color: #a8a594;
+}
+.container .portfolio-container .portfolio-title {
+  background: inherit;
+}
+.container .portfolio-container h1 {
+  text-align: center;
+  background: inherit;
+  font-size: 3rem;
+  padding: 10px 0;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
+}
+.intro {
+  margin: 30px 5%;
+  border: 2px solid #0c0d11;
+  padding: 2.5%;
+  border-radius: 10px;
+  background: #141720;
+  transition: background 2s;
+}
+.intro:hover {
+  background: #292d41;
+}
+.intro h1 {
+  background: inherit;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
+  font-size: 4rem;
+  text-align: center;
+}
+.intro h2 {
+  background: inherit;
+  color: #a8a594;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 20px 0;
+  text-align: center;
+}
+.intro h2 span {
+  background: inherit;
+  color: #a8a594 !important;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 20px 0;
+}
+.card-container {
+  display: flex;
+  background: #141720;
+  margin: 30px 5%;
+  border: 2px solid #0c0d11;
+  padding: 2.5%;
+  flex-flow: column nowrap;
+  border-radius: 10px;
+}
+.card-container .block-one {
+  display: flex;
+  border-radius: 10px;
+  flex-flow: row nowrap;
+  border: 2px solid #5c0011;
+}
+@media (max-width: 600px) {
+  .card-container .block-one {
+    flex-flow: column wrap;
+  }
+}
+.card-container .skills {
+  color: #a8a594;
+  background: #1c202c;
+  margin: 20px;
+  padding: 1.5%;
+  border: 2px solid #0c0d11;
+  border-radius: 10px;
+  width: 29%;
+  transition: background 2s;
+}
+@media (max-width: 600px) {
+  .card-container .skills {
+    width: 90%;
+  }
+}
+.card-container .skills h2 {
+  font-size: 3rem;
+  background: inherit;
+  margin: 10px 10px 0 0;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
+  font-weight: 400;
+  padding-left: 3%;
+}
+.card-container .skills ul {
+  font-size: 3rem;
+  background: inherit;
+  margin: 10px 10px 0 0;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
+  font-weight: 400;
+}
+@media (max-width: 600px) {
+  .card-container .skills ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: space-evenly;
+  }
+}
+.card-container .skills li {
+  background: inherit;
+  margin: 25px 20px 20px;
+  color: #a8a594;
+  text-shadow: none;
+}
+.card-container .skills:hover {
+  background: #292d41;
+}
+.card-container .work-history {
+  color: #a8a594;
+  background: #1c202c;
+  margin: 20px;
+  padding: 1.5%;
+  border: 2px solid #0c0d11;
+  border-radius: 10px;
+  width: 60%;
+  transition: background 2s;
+}
+@media (max-width: 600px) {
+  .card-container .work-history {
+    width: 90%;
+  }
+}
+.card-container .work-history h2 {
+  font-size: 3rem;
+  background: inherit;
+  margin: 10px 10px 0 0;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
+  font-weight: 400;
+  padding-left: 3%;
+}
+.card-container .work-history ul {
+  font-size: 3rem;
+  background: inherit;
+  margin: 10px 10px 0 0;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
+  font-weight: 400;
+}
+.card-container .work-history li {
+  background: inherit;
+  margin: 25px 20px 20px;
+  color: #a8a594;
+  text-shadow: none;
+}
+.card-container .work-history:hover {
+  background: #292d41;
+}
+.card-container .block-two {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 30px 0;
+  margin: 30px 0;
+  width: 100%;
+  border: 2px solid #5c0011;
+  border-radius: 10px;
+  background: #10121a;
+}
+.card-container .block-two .submit-button {
+  display: flex;
+  align-self: center;
+  background: inherit;
+}
+.card-container .block-two .submit-button button {
+  border: 3px solid #5c0011 !important;
+  border-radius: 10px;
+  background: #a8a594;
+  margin: 10px 0;
+}
+.card-container .block-two .submit-button button:hover {
+  background: #5c0011;
+  font-weight: 500;
+}
+.card-container .block-two .submit-button button:hover a {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
+}
+.card-container .block-two .submit-button button a {
+  text-decoration: none;
+  color: #0c0d11;
+  background: none;
+  padding: 5px 10px;
+  display: flex;
+  align-self: center;
+  font-size: 1.6rem;
+}
+.card-container .block-two .contact {
+  color: #a8a594;
+  margin: 20px;
+  padding: 1.5%;
+  border: 2px solid #0c0d11;
+  border-radius: 10px;
+  width: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  background: #1c202c;
+  transition: background 2s;
+}
+.card-container .block-two .contact:hover {
+  background: #292d41;
+}
+.card-container .block-two .contact h1 {
+  text-align: center;
+  background: inherit;
+  font-size: 3rem;
+  padding: 10px 0;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
+}
+.card-container .block-two .contact .form-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background: inherit;
+  padding: 10px;
+}
+.card-container .block-two .contact .form-row .category {
+  display: flex;
+  color: #a8a594;
+  font-size: 1.6rem;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 11px;
+  background: inherit;
+  width: 28%;
+  font-weight: 500;
+}
+.card-container .block-two .contact .form-row .msg {
+  padding-top: 3px;
+}
+.card-container .block-two .contact .form-row .form-box {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  background: inherit;
+}
+.card-container .block-two .contact .form-row .form-box input,
+.card-container .block-two .contact .form-row .form-box textarea {
+  width: 90%;
+}
+.card-container .block-two .contact .form-row .form-box input {
+  height: 40px;
+}
+.card-container .block-two .social-media-nav {
+  display: flex;
+  color: #a8a594;
+  background: #1c202c;
+  margin: 20px;
+  padding: 1.5%;
+  border: 2px solid #0c0d11;
+  border-radius: 10px;
+  width: auto;
+  justify-content: center;
+  flex-flow: row nowrap;
+  background: #0c0d11;
+}
+.card-container .block-two .social-media-nav a {
+  display: flex;
+  flex-flow: row wrap;
+  text-decoration: none;
+}
+.card-container .block-two .social-media-nav a i {
+  width: 100%;
+  font-size: 4.5rem;
+  padding: 5px 20px;
+  color: #a8a594;
+  background: #0c0d11;
+}
+.card-container .block-two .social-media-nav a i:hover {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
+  background: #0c0d11;
+}
+/* Color Pallet Variables */
+/* Lighter layers to indicate upper layers of background */
+.bk-darkest {
+  background: #0c0d11;
+}
+.bk-darker {
+  background: #10121a;
+}
+.bk-dark {
+  background: #141720;
+}
+.bk-light {
+  background: #1c202c;
+}
+.bk-lighter {
+  background: #202333;
+}
+.bk-lightest {
+  background: #292d41;
+}
+.fancy-font {
+  color: #a8a594;
+  text-shadow: 1px -1px 0 #5c0011, 1px 1px 0 #AF001F;
+  font-weight: 200;
+}
+.normal-font {
+  color: #a8a594;
+  text-shadow: none;
+}
+.flex {
+  display: flex;
+}
+.card-box {
+  color: #a8a594;
+  background: #1c202c;
+  margin: 20px;
+  padding: 1.5%;
+  border: 2px solid #0c0d11;
+  border-radius: 10px;
+}
+.card-ul {
+  font-size: 3rem;
+  background: inherit;
+  margin: 10px 10px 0 0;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
+  font-weight: 400;
+}
+.card-li {
+  background: inherit;
+  margin: 25px 20px 20px;
+  color: #a8a594;
+  text-shadow: none;
+}
+.border-round {
+  border-radius: 10px;
+}
+.smokey {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #a8a594;
+  text-shadow: #fa0000c9 0px 3px 3px;
+}

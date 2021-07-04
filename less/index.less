@@ -1,3 +1,4 @@
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -20,14 +21,21 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
+	font-size: 62.5%;
 	vertical-align: baseline;
+	font-family: 'Tomorrow', sans-serif;
+	background: @dark-darker;
+	
+}
+
+body {
+	background: @dark-darkest;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
+	background: @dark-darker;
 }
 body {
 	line-height: 1;
@@ -57,3 +65,484 @@ html, body {
     height: 100%;
 }
 
+/*Container to Specify overall dimensions of site */
+
+.container {
+
+	width: 980px;
+	margin: 0 auto;
+	min-height: 100vh;
+	max-width: 100%;
+	display: flex;
+	
+	flex-flow: column wrap;
+	border-left: 5px solid @highlight-red;
+	border-right: 5px solid @highlight-red;
+	@media (max-width: 600px) {
+		
+		width: 100%;
+	
+	}
+
+	header {
+		background: @dark-darker;
+		margin: 20px 0;
+		height: 50px;
+		
+	
+		nav {
+			background: @dark-darker;
+			.flex;
+			justify-content: space-evenly;
+	
+			a {
+				background: @dark-darker;
+				text-decoration: none;
+				.smokey;
+				font-size: 2.2rem;
+				&:hover {
+					border-bottom: 2px solid @highlight-red;
+					padding-bottom: 5px;
+				}
+				@media (max-width: 600px) {
+					font-size: 1.8rem;
+				}
+				
+	
+			}
+		}
+	}
+	.portfolio-container {
+		margin: 80px 0 30px;
+		border: 2px solid @highlight-dark-red;		
+		padding: 2.5%;
+		display: flex;
+		.border-round;
+		.bk-darker; 
+		.flex;
+		flex-flow: column nowrap;
+		.card-container {
+			.flex;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			align-items: center;
+			@media (max-width: 873px) {
+				flex-flow: column nowrap;
+			}
+		}
+
+		.portfolio-card {
+			width: 43%;
+			margin: 20px;
+			padding: 20px;
+			.border-round;
+			border: 2px solid @dark-darkest;
+			transition: background 2s;
+			.flex;
+			flex-flow: column nowrap;
+			justify-content: space-between;
+			align-items: center;
+			@media (max-width: 873px) {
+				width: 70%;
+				flex-flow: row wrap;
+				font-size: 2rem;
+			}
+			@media (max-width: 500px) {
+				width: 75%;
+				
+			}
+			&:hover {
+				.bk-lightest;
+			}
+			.bk-light;
+			img {
+				width: 100%;
+				
+			}
+			h2 {
+				font-size: 2.2rem;
+				font-weight: 100;
+				.smokey;
+				color: @font-color;
+				background: inherit;
+				margin: 12px 0 15px;
+			}
+			a:last-child {
+				text-decoration: none;
+				font-size: 1.8rem;
+				background: inherit;
+			}
+
+			i {
+				font-size: 2.2rem;
+				background: inherit;
+				margin: 0 5px;
+			}
+			.git {
+				font-size: 2rem;
+				text-decoration: none;
+				background: inherit;
+				color: @font-color;
+			}
+	}
+	
+	.portfolio-title {
+		background: inherit;
+	}
+	h1 {
+		text-align: center;
+		background: inherit;
+		font-size: 3rem;
+		padding: 10px 0;
+		.smokey;
+	}
+}
+}
+
+	
+
+	.intro {
+		margin: 30px 5%;
+		border: 2px solid @dark-darkest;
+		padding: 2.5%;
+		.border-round;
+		.bk-dark; 
+		transition: background 2s;;
+		&:hover {
+			.bk-lightest;
+		}
+		
+		h1 {
+			color: @font-color;
+			background: inherit;
+			.smokey;
+			font-size: 4rem;
+			text-align: center;
+		}
+		h2 {
+			background: inherit;
+			color: @font-color;
+			font-size: 2.5rem;
+			font-weight: 400;
+			margin: 20px 0;
+			text-align: center;
+			span {
+				background: inherit;
+			color: @font-color!important;
+			font-size: 2.5rem;
+			font-weight: 400;
+			margin: 20px 0;
+			}
+		}
+	}
+	.card-container {
+		.flex;
+		.bk-dark;
+		margin: 30px 5%;
+		border: 2px solid @dark-darkest;
+		padding: 2.5%;
+		flex-flow: column nowrap;
+		.border-round;
+
+		.block-one {
+			.flex;
+			.border-round;
+			flex-flow: row nowrap;
+			border: 2px solid @highlight-dark-red;
+			@media (max-width: 600px) {
+				flex-flow: column wrap;
+			}
+		}
+		.skills {
+			.card-box;
+			width: 29%;
+			@media (max-width: 600px) {
+				width: 90%;
+			}
+			transition: background 2s;
+			h2 {
+				.card-ul;
+				padding-left: 3%;
+			}
+			ul {
+				.card-ul;
+				@media (max-width: 600px) {
+					.flex;
+					
+					flex-flow: row wrap;
+					align-items: space-evenly;
+				}
+				
+			}
+			
+			li {
+				.card-li;
+				
+				
+			}
+			&:hover {
+				.bk-lightest;
+			}
+		}
+	
+		.work-history {
+			.card-box;
+			width: 60%;
+			@media (max-width: 600px) {
+				width: 90%;
+			}
+			transition: background 2s;
+			h2 {
+				.card-ul;
+				padding-left: 3%;
+			}
+			ul {
+				.card-ul;
+				
+			}
+			li {
+				.card-li;
+			}
+			&:hover {
+				.bk-lightest;
+			}
+		}
+		.block-two {
+			.flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			padding: 30px 0;
+			margin: 30px 0;
+			width: 100%;
+			border: 2px solid @highlight-dark-red;
+			.border-round;
+			.bk-darker;
+			.submit-button {
+				.flex;
+				align-self: center;
+				background: inherit;
+				button {
+					border: 3px solid @highlight-dark-red!important;
+					border-radius: 10px;
+					background: @font-color;
+					
+					margin: 10px 0;
+					
+					&:hover {
+						background: @highlight-dark-red;
+						font-weight: 500;
+						a {
+							color: @font-color;
+							.smokey;
+							
+							
+						}
+						
+						
+						
+				}
+				
+				a {
+					text-decoration: none;
+					color: @dark-darkest;
+					background: none;
+					padding: 5px 10px;
+					
+					.flex;
+					align-self: center;
+					font-size: 1.6rem;
+					
+
+				}
+			}
+		}
+		.contact {
+			.card-box;
+			width: 90%;			
+			display: flex;
+			flex-flow: column nowrap;
+			.bk-light;
+			transition: background 2s;
+			&:hover {
+				.bk-lightest;
+			}
+			h1 {
+				text-align: center;
+				background: inherit;
+				font-size: 3rem;
+				padding: 10px 0;
+				.smokey;
+			}
+			.form-row {
+				.flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+				background: inherit;
+				padding: 10px;
+				.category {
+					.flex;
+					color: @font-color;
+					font-size: 1.6rem;
+					justify-content: flex-end;
+					align-items: flex-start;
+					padding-top: 11px;
+					background: inherit;
+					width: 28%;
+					font-weight: 500;
+					
+				}
+				.msg {
+					padding-top: 3px;
+				}
+				.form-box {
+					.flex;
+					justify-content: center;
+					width: 70%;
+					background: inherit;
+					input, textarea {
+						width: 90%;
+					}
+					input {
+						height: 40px;
+					}
+				}
+			}
+		}
+
+		.social-media-nav {
+			.flex;
+			.card-box;
+			width: auto;
+			justify-content: center;
+			flex-flow: row nowrap;
+			.bk-darkest;
+			
+			a {
+				.flex;
+				flex-flow: row wrap;
+				text-decoration: none;
+
+
+			}
+			a i {
+				width: 100%;
+				font-size: 4.5rem;
+				padding: 5px 20px;
+				color: @font-color;
+				.bk-darkest;
+				&:hover {
+					
+					.smokey;
+					.bk-darkest;
+				}
+			}
+			
+		}
+		
+			
+
+		
+
+		
+	}
+
+	
+}
+
+
+
+
+
+
+
+
+
+/* Color Pallet Variables */
+
+/* Lighter layers to indicate upper layers of background */
+
+@dark-darkest: #0c0d11;
+.bk-darkest {
+	background: @dark-darkest;
+}
+@dark-darker: #10121a;
+.bk-darker {
+	background: @dark-darker;
+}
+@dark-dark: #141720;
+.bk-dark {
+	background: @dark-dark;
+}
+@dark-light: #1c202c;
+.bk-light {
+	background: @dark-light;
+}
+@dark-lighter: #202333;
+.bk-lighter {
+	background: @dark-lighter;
+}
+@dark-lightest: #292d41;
+.bk-lightest {
+	background: @dark-lightest;
+}
+
+@font-color: #a8a594;
+@font-shadow: #fa0000c9;
+
+@highlight-red: #AF001F;
+@hightlight-light-red: #a8717b;
+@highlight-dark-red: #5c0011;
+
+.fancy-font {
+	color: @font-color;
+	text-shadow:
+	1px -1px 0 @highlight-dark-red,
+	1px 1px 0 @highlight-red;
+	font-weight: 200;
+}
+
+.normal-font {
+	color: @font-color;
+	text-shadow: none;
+}
+
+.flex {
+	display: flex;
+
+}
+
+.card-box {
+	color: @font-color;
+	.bk-light;
+	margin: 20px;
+	padding: 1.5%;
+	border: 2px solid @dark-darkest;
+	
+	.border-round;
+}
+
+.card-ul {
+	font-size: 3rem;
+	background: inherit;
+	margin: 10px 10px 0 0;
+	.smokey;
+	font-weight: 400;
+}
+
+.card-li {
+	background: inherit;
+	margin: 25px 20px 20px;
+	.normal-font;
+}
+
+.border-round {
+	border-radius: 10px;
+}
+
+.smokey {
+	-webkit-background-clip: text;
+  	-moz-background-clip: text;
+ 	background-clip: text;
+  	color: @font-color;
+  	text-shadow: @font-shadow 0px 3px 3px;
+}
